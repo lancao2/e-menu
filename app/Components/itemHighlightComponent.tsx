@@ -1,4 +1,17 @@
-const ItemHeightComponent = ({ text, icon, active = false, onClick }: any) => {
+import { ReactNode } from "react";
+
+interface ItemHeightComponentProps {
+  text: string;
+  icon: ReactNode;
+  active: boolean;
+  onClick: () => void;
+}
+const ItemHeightComponent = ({
+  text,
+  icon,
+  active = false,
+  onClick,
+}: ItemHeightComponentProps) => {
   return (
     <div
       className={`flex items-center gap-1  ${
