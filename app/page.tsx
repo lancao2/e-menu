@@ -16,8 +16,10 @@ export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
   const router = useRouter(); // Inicializar o hook de roteamento
 
-  const handleCategoryClick = (categoryId: any) => {
-    setSelectedCategory(categoryId === selectedCategory ? null : categoryId);
+  const handleCategoryClick = (categoryId: string) => {
+    setSelectedCategory(
+      categoryId === selectedCategory ? "featured" : categoryId
+    );
   };
 
   const handleSearchChange = (term: string) => {
