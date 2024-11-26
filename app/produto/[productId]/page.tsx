@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import React from "react";
 import products from "@/app/data/products";
+import { Iproduct } from "@/app/data/products";
 
 export default function ProductPage({
   params,
@@ -10,7 +11,7 @@ export default function ProductPage({
   params: Promise<{ productId: string }>;
 }) {
   const router = useRouter();
-  const [product, setProduct] = React.useState<any>(null);
+  const [product, setProduct] = React.useState<Iproduct | undefined>();
 
   React.useEffect(() => {
     async function fetchParams() {

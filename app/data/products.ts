@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
 
-interface Iproduct{
+export interface Iproduct{
     id: string;
     name: string;
     description: string; 
