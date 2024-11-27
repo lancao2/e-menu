@@ -13,7 +13,7 @@ export interface Iproduct{
     ingredients: string[]
 }
 
-const products: Iproduct[] = [
+const productsSoart: Iproduct[] = [
   {
     id: uuidv4(),
     name: "Cheeseburger Clássico",
@@ -243,5 +243,5 @@ const products: Iproduct[] = [
   },
        
 ]
-
+const products = productsSoart.sort((a, b) => a.name.localeCompare(b.name));
 export default products;
